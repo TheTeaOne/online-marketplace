@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товарів</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+     <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Навігація -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-shop"></i> Мій Магазин
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Головна</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="products.html">Каталог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <i class="bi bi-cart3"></i> Кошик
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Фільтри (ліворуч) і каталог (праворуч) -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="mb-4">Каталог товарів</h2>
+
+            <div class="row">
+                <!-- Сайдбар: фільтри / сортування -->
+                <aside class="col-lg-3 mb-4">
+                    <div class="card shadow-sm sticky-top" style="top:20px;">
+                        <div class="card-body">
+                            <h5 class="card-title mb-3">Категорії товарів</h5>
+
+                            <div class="mb-3">
+                                <label class="form-label visually-hidden" for="category-filter">Категорія</label>
+                                <select class="form-select" id="category-filter">
+                                    <option value="all">Усі товари</option>
+                                </select>
+                            </div>
+
+                            <h6 class="mt-4">Сортування</h6>
+                            <div class="mb-3">
+                                <label class="form-label visually-hidden" for="sort-filter">Сортування</label>
+                                <select class="form-select" id="sort-filter">
+                                    <option value="default">За замовчуванням</option>
+                                    <option value="price-asc">Ціна: за зростанням</option>
+                                    <option value="price-desc">Ціна: за спаданням</option>
+                                    <option value="name">За назвою</option>
+                                </select>
+                            </div>
+
+                            <h6 class="mt-4">Пошук</h6>
+                            <div class="mb-3">
+                                <input type="text" class="form-control" id="search-input" placeholder="Назва товару...">
+                            </div>
+
+                            <h6 class="mt-4">Наявність</h6>
+                            <div class="form-check mb-2">
+                                <input class="form-check-input" type="checkbox" id="in-stock-check">
+                                <label class="form-check-label" for="in-stock-check">Тільки в наявності</label>
+                            </div>
+
+                            <h6 class="mt-4">Ціна</h6>
+                            <div class="d-flex gap-2 mb-3">
+                                <input type="number" class="form-control" id="price-min" placeholder="мін" min="0">
+                                <input type="number" class="form-control" id="price-max" placeholder="макс" min="0">
+                            </div>
+
+                            <div class="d-grid">
+                                <button id="apply-filters" class="btn btn-primary">Застосувати</button>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+
+                <!-- Контент: товари -->
+                <main class="col-lg-9">
+                    <!-- Короткий рядок статусу / кількість / додаткове сортування (опціонально) -->
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div id="results-info" class="text-muted">Показано всі товари</div>
+                        <!-- Місце для швидкого сортування (якщо хочете дублювати) -->
+                        <!-- <div>
+                            <select class="form-select form-select-sm" id="quick-sort">
+                                <option value="default">За замовчуванням</option>
+                            </select>
+                        </div> -->
+                    </div>
+
+                    <!-- Список товарів -->
+                    <div class="row g-4" id="products-list">
+                        <!-- Товари будуть додані через JavaScript -->
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2024 Мій Магазин. Всі права захищені.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="scripts/cart.js"></script>
+    <script src="scripts/products.js"></script>
+
+    <script>
+        document.getElementById('apply-filters')?.addEventListener('click', () => {
+        });
+    </script>
+</body>
+</html>

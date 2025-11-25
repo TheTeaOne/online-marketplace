@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Інтернет-магазин - Головна</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Навігація -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="bi bi-shop"></i> Мій Магазин
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html">Головна</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">Каталог</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="cart.html">
+                            <i class="bi bi-cart3"></i> Кошик
+                            <span class="badge bg-danger" id="cart-count">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section з фоновим зображенням -->
+    <section class="hero-section" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1607082348824-0a96f2a4b9da?w=1200&h=600&fit=crop') center/cover no-repeat; min-height: 600px; display: flex; align-items: center; color: white;">
+        <div class="container text-center">
+            <h1 class="display-3 fw-bold mb-3">Ласкаво просимо в наш магазин!</h1>
+            <p class="lead fs-5 mb-4">Найкращі товари за найкращими цінами з швидкою доставкою по всій країні</p>
+            <div class="d-flex gap-3 justify-content-center">
+                <a href="products.html" class="btn btn-primary btn-lg">
+                    <i class="bi bi-shop"></i> Переглянути каталог
+                </a>
+                <a href="#advantages" class="btn btn-outline-light btn-lg">
+                    <i class="bi bi-info-circle"></i> Дізнатися більше
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Блок переваг -->
+    <section id="advantages" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Чому вибирають нас?</h2>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center p-4 h-100 border-0">
+                        <div class="mb-3">
+                            <i class="bi bi-truck text-primary" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="fw-bold">Швидка доставка</h5>
+                        <p class="text-muted">Доставляємо по всій країні за 1-3 дні</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center p-4 h-100 border-0">
+                        <div class="mb-3">
+                            <i class="bi bi-shield-check text-success" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="fw-bold">Гарантія якості</h5>
+                        <p class="text-muted">Всі товари перевірені та сертифіковані</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center p-4 h-100 border-0">
+                        <div class="mb-3">
+                            <i class="bi bi-credit-card text-info" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="fw-bold">Безпечні платежі</h5>
+                        <p class="text-muted">Підтримуємо всі популярні способи оплати</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="text-center p-4 h-100 border-0">
+                        <div class="mb-3">
+                            <i class="bi bi-headset text-warning" style="font-size: 3rem;"></i>
+                        </div>
+                        <h5 class="fw-bold">Підтримка 24/7</h5>
+                        <p class="text-muted">Наша команда завжди готова допомогти</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Популярні товари -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 fw-bold">Популярні товари</h2>
+            <div class="row" id="products-list">
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">Відгуки наших клієнтів</h2>
+            <div class="swiper reviewsSwiper" style="max-width: 1400px; width: 95%; margin: 0 auto;">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex gap-1 mb-3">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                                <p class="card-text mb-3">"Відмінний магазин! Товари якісні, доставка швидка. Всім дуже доволені!"</p>
+                                <h6 class="card-title fw-bold mb-1">Марія Коваленко</h6>
+                                <small class="text-muted">Верифікований покупець</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex gap-1 mb-3">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                                <p class="card-text mb-3">"Купував кілька разів, завжди задоволений. Рекомендую всім своїм друзям!"</p>
+                                <h6 class="card-title fw-bold mb-1">Іван Петренко</h6>
+                                <small class="text-muted">Верифікований покупець</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex gap-1 mb-3">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                                <p class="card-text mb-3">"Супер! Гарні ціни, добра якість і ввічливий персонал. Дякую!"</p>
+                                <h6 class="card-title fw-bold mb-1">Алена Сидоренко</h6>
+                                <small class="text-muted">Верифікований покупець</small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body">
+                                <div class="d-flex gap-1 mb-3">
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                    <i class="bi bi-star-fill text-warning"></i>
+                                </div>
+                                <p class="card-text mb-3">"Найкращий вибір товарів! Часто роблять хорошу знижку. Лайк!"</p>
+                                <h6 class="card-title fw-bold mb-1">Дмитро Волков</h6>
+                                <small class="text-muted">Верифікований покупець</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-5 mt-5">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h6 class="fw-bold mb-3">Про магазин</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Про нас</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Контакти</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Блог</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h6 class="fw-bold mb-3">Інформація</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white-50 text-decoration-none">Доставка</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">Повернення</a></li>
+                        <li><a href="#" class="text-white-50 text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-4 mb-md-0">
+                    <h6 class="fw-bold mb-3">Контакти</h6>
+                    <ul class="list-unstyled">
+                        <li class="text-white-50"><i class="bi bi-telephone"></i> +38 (000) 00-00-00</li>
+                        <li class="text-white-50"><i class="bi bi-envelope"></i> info@shop.com</li>
+                        <li class="text-white-50"><i class="bi bi-geo-alt"></i> м. Київ, вул. Головна, 1</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h6 class="fw-bold mb-3">Слідкуйте</h6>
+                    <div class="d-flex gap-2">
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="bg-white-50">
+            <div class="text-center text-white-50">
+                <p class="mb-0">&copy; 2024 Мій Магазин. Всі права захищені.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="scripts/cart.js"></script>
+    <script src="scripts/script.js"></script>
+    <script>
+        const swiper = new Swiper('.reviewsSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 4000,
+                disableOnInteraction: false,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                }
+            }
+        });
+    </script>
+</body>
+</html>
