@@ -20,6 +20,13 @@ body {
     overflow-x: hidden;
 }
 
+.btn-primary{
+    background-color: #072450 !important;
+}
+
+.text-primary{
+    color: #000000 !important;
+} 
 
 .styleFooter {
     background-color: #000;
@@ -174,8 +181,8 @@ input{
     max-width: 100%;
 }
 
-.search input:hover{
-    border: solid 2px rgb(255, 255, 255);
+.search input:focus{
+    border: solid 3px #0b5ed7;
 }
 
 .search-index input{
