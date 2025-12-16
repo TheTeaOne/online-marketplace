@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Інтернет-магазин - Головна</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="stylesheet" href="styles/style.css?v=4">
 </head>
@@ -41,128 +39,26 @@
 </svg>
                 </div>
     </nav>
+
     <div class="page-wrapper">
-    <section class="container-slider">
-        <div class="slider-wrapper">
-            <p class="arrow-left">❮</p>
-            <p class="arrow-right">❯</p>
-            <div class="slider">
-                <img id="slide-1" src="./img/Winter sale.webp" alt=""/>
-                <img id="slide-2" src="./img/15629.jpg" alt=""/>
-                <img id="slide-3" src="./img/black.jpg" alt=""/>
-            </div>
-                <div class="slider-nav">
-                        <p></p>
-                        <p></p>
-                        <p></p>
-                </div>
+    <section class="favotite-list">
+
+    <div class="container-favorite-show">
+            <h2 class="wish-list">Список бажанного</h2>
+            <div class="favorite-container"></div>
+
         </div>
-    </section>
-    <!-- Hero Section з фоновим зображенням -->
-    <section class="hero-section">
-    </section>
-
-    <!-- Блок переваг -->
-    <!-- <section id="advantages" class="py-5 bg-light">
-    </section> -->
-
-        <section class="popular-section">
-            <div class="popular-container">
-                <h2 class="popular-title">Популярні товари</h2>
-                <div class="product-lists" id="products-list">
-                </div>
-            </div>
-        </section>
-
-    <section class="product-slider-section">
-    <h2 class="sw-title">Техніка</h2>
-
-    <div class="swiper product-swiper">
-        <div class="swiper-wrapper" id="swiper-products-list">
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
-    </section>
-
-    <section class="product-slider-section">
-    <h2 class="sw-title">Одяг</h2>
-
-    <div class="swiper clothing-swiper">
-        <div class="swiper-wrapper" id="swiper-clothing-list">
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
-    </section>
-
-    <section class="product-slider-section">
-    <h2 class="sw-title">Ігри</h2>
-
-    <div class="swiper games-swiper">
-        <div class="swiper-wrapper" id="swiper-games-list">
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-    </div>
-    </section>
-    <div class="more-products">
-        <a href="products.html">
-        <span class="btn-more">
-            Більше товарів
-        </span>
-        </a>
-    </div>
-    <section class="">
-        <div class="">
-        </div>
+        </conteiner>
     </section>
     </div>
-    
-
-    <footer class="styleFooter">
-        <div class="myContainer">
-                <div class="footerColume">
-                    <h6 class="about">Про магазин</h6>
-                    <ul>
-                        <li><a href="#" class="text-white-50 text-decoration-none">Про нас</a></li>
-                        <li><a href="#" class="text-white-50 text-decoration-none">Контакти</a></li>
-                        <li><a href="#" class="text-white-50 text-decoration-none">Блог</a></li>
-                    </ul>
-                </div>
-                <div class="footerColume">
-                    <h6 class="about">Інформація</h6>
-                    <ul>
-                        <li><a href="#" class="text-white-50 text-decoration-none">Доставка</a></li>
-                        <li><a href="#" class="text-white-50 text-decoration-none">Повернення</a></li>
-                        <li><a href="#" class="text-white-50 text-decoration-none">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="footerColume">
-                    <h6 class="about">Контакти</h6>
-                    <ul>
-                        <li class="text-white-50"><i class="bi bi-telephone"></i> +38 (000) 00-00-00</li>
-                        <li class="text-white-50"><i class="bi bi-envelope"></i> info@shop.com</li>
-                        <li class="text-white-50"><i class="bi bi-geo-alt"></i> м. Київ, вул. Головна, 1</li>
-                    </ul>
-                </div>
-                <div class="footerColume">
-                    <h6 class="about">Слідкуйте</h6>
-                    <div class="socialIcon">
-                        <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="btn btn-outline-light btn-sm"><i class="bi bi-twitter"></i></a>
-                    </div>
-                </div>
-        </div>
-                <div class="copyFooter">
+    <footer class="styleFooterCart">
+        <div class="copyFooterCart">
                 &copy; 2024 Мій Магазин. Всі права захищені.            
             </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="scripts/products.js"></script>
     <script src="scripts/cart.js"></script>
     <script src="scripts/favorite.js"></script>
-    <script src="scripts/script.js"></script>
 </body>
 </html>

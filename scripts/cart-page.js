@@ -33,7 +33,7 @@ function displayCart() {
                 <div class="row align-items-center">
                     <div class="col-md-2">
                         <img src="img/${item.image}" class="img-fluid rounded" alt="${item.title}"
-                             onerror="this.src='https://via.placeholder.com/100x100?text=Немає+зображення'">
+                            onerror="this.src='https://via.placeholder.com/100x100?text=Немає+зображення'">
                     </div>
                     <div class="col-md-4">
                         <h5 class="mb-1">${item.title}</h5>
@@ -49,7 +49,7 @@ function displayCart() {
                                 <i class="bi bi-dash"></i>
                             </button>
                             <input type="number" class="form-control form-control-sm text-center quantity-input" 
-                                   value="${item.quantity}" min="1" data-id="${item.id}">
+                                value="${item.quantity}" min="1" data-id="${item.id}">
                             <button class="btn btn-outline-secondary btn-sm quantity-btn" 
                                     data-action="increase" data-id="${item.id}">
                                 <i class="bi bi-plus"></i>

@@ -6,36 +6,41 @@
     <title>Товар</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
-     <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/style.css?v=4">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <i class="bi bi-shop"></i> Мій Магазин
+    <nav class="headerBar">
+        <div class="iconLeft">
+            <a href="index.html">
+                <svg width="35" height="30" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 19H19M1 5V6C1 6.79565 1.31607 7.55871 1.87868 8.12132C2.44129 8.68393 3.20435 9 4 9C4.79565 9 5.55871 8.68393 6.12132 8.12132C6.68393 7.55871 7 6.79565 7 6M1 5H19M1 5L3 1H17L19 5M7 6V5M7 6C7 6.79565 7.31607 7.55871 7.87868 8.12132C8.44129 8.68393 9.20435 9 10 9C10.7956 9 11.5587 8.68393 12.1213 8.12132C12.6839 7.55871 13 6.79565 13 6M13 6V5M13 6C13 6.79565 13.3161 7.55871 13.8787 8.12132C14.4413 8.68393 15.2044 9 16 9C16.7956 9 17.5587 8.68393 18.1213 8.12132C18.6839 7.55871 19 6.79565 19 6V5M3 19V8.85001M17 19V8.85001M7 19V15C7 14.4696 7.21071 13.9609 7.58579 13.5858C7.96086 13.2107 8.46957 13 9 13H11C11.5304 13 12.0391 13.2107 12.4142 13.5858C12.7893 13.9609 13 14.4696 13 15V19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Головна</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="products.html">Каталог</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="cart.html">
-                            <i class="bi bi-cart3"></i> Кошик
-                            <span class="badge bg-danger" id="cart-count">0</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
         </div>
+            <div class="search">
+                <form action="products.html" method="get">
+                <svg class="search-icon" width="24" height="24" viewBox="-2 -2 29 27" fill="white" xmlns="http://www.w3.org/2000/svg">
+<path d="M25 23L17 15.6667M1 9.55556C1 10.6791 1.24141 11.7916 1.71046 12.8296C2.1795 13.8676 2.86699 14.8108 3.73367 15.6052C4.60035 16.3997 5.62925 17.0299 6.76162 17.4599C7.89399 17.8898 9.10766 18.1111 10.3333 18.1111C11.559 18.1111 12.7727 17.8898 13.905 17.4599C15.0374 17.0299 16.0663 16.3997 16.933 15.6052C17.7997 14.8108 18.4872 13.8676 18.9562 12.8296C19.4253 11.7916 19.6667 10.6791 19.6667 9.55556C19.6667 8.43202 19.4253 7.31949 18.9562 6.28149C18.4872 5.24348 17.7997 4.30032 16.933 3.50586C16.0663 2.71141 15.0374 2.08121 13.905 1.65125C12.7727 1.2213 11.559 1 10.3333 1C9.10766 1 7.89399 1.2213 6.76162 1.65125C5.62925 2.08121 4.60035 2.71141 3.73367 3.50586C2.86699 4.30032 2.1795 5.24348 1.71046 6.28149C1.24141 7.31949 1 8.43202 1 9.55556Z" stroke="black" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            <input type="text" name="search" placeholder="Пошук"> 
+            </form>
+            </div>
+                <div class="iconRight">
+                    <a href="cart.html">
+                    <svg class="cart" width="30" height="30" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M4.75 24.3333C5.74456 24.3333 6.69839 24.6845 7.40165 25.3096C8.10491 25.9348 8.5 26.7826 8.5 27.6667C8.5 28.5507 8.10491 29.3986 7.40165 30.0237C6.69839 30.6488 5.74456 31 4.75 31C3.75544 31 2.80161 30.6488 2.09835 30.0237C1.39509 29.3986 1 28.5507 1 27.6667C1 26.7826 1.39509 25.9348 2.09835 25.3096C2.80161 24.6845 3.75544 24.3333 4.75 24.3333ZM4.75 24.3333H25.375M4.75 24.3333V1H1M25.375 24.3333C26.3696 24.3333 27.3234 24.6845 28.0266 25.3096C28.7299 25.9348 29.125 26.7826 29.125 27.6667C29.125 28.5507 28.7299 29.3986 28.0266 30.0237C27.3234 30.6488 26.3696 31 25.375 31C24.3804 31 23.4266 30.6488 22.7234 30.0237C22.0201 29.3986 21.625 28.5507 21.625 27.6667C21.625 26.7826 22.0201 25.9348 22.7234 25.3096C23.4266 24.6845 24.3804 24.3333 25.375 24.3333ZM4.75 4.33333L31 6L29.125 17.6667H4.75" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    </a>
+            <a href="favotite.html">
+            <svg class="heart" width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M29.0074 17.5824L16.5139 31.5L4.02035 17.5824C3.19629 16.6805 2.54719 15.5964 2.11392 14.3984C1.68066 13.2004 1.47261 11.9145 1.50289 10.6216C1.53317 9.32878 1.80111 8.05697 2.28985 6.88631C2.77858 5.71564 3.47753 4.67148 4.34267 3.81957C5.2078 2.96767 6.22039 2.32647 7.31667 1.93636C8.41294 1.54624 9.56916 1.41567 10.7125 1.55286C11.8558 1.69004 12.9616 2.09201 13.96 2.73346C14.9584 3.37491 15.828 4.24194 16.5139 5.27995C17.2027 4.24947 18.0733 3.39002 19.0711 2.75538C20.0688 2.12074 21.1723 1.72457 22.3124 1.59168C23.4526 1.45878 24.6048 1.59201 25.6971 1.98303C26.7893 2.37405 27.7981 3.01445 28.6602 3.86414C29.5223 4.71383 30.2192 5.75452 30.7072 6.92107C31.1953 8.08763 31.464 9.35495 31.4966 10.6437C31.5292 11.9325 31.325 13.2149 30.8967 14.4108C30.4683 15.6067 29.8252 16.6902 29.0074 17.5937" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+            </a>
+    <svg class="account" width="23" height="33" viewBox="0 0 23 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.5 31.5V28.1667C1.5 26.3986 2.20238 24.7029 3.45262 23.4526C4.70286 22.2024 6.39856 21.5 8.16667 21.5H14.8333C16.6014 21.5 18.2971 22.2024 19.5474 23.4526C20.7976 24.7029 21.5 26.3986 21.5 28.1667V31.5M4.83333 8.16667C4.83333 9.93478 5.53571 11.6305 6.78595 12.8807C8.0362 14.131 9.73189 14.8333 11.5 14.8333C13.2681 14.8333 14.9638 14.131 16.214 12.8807C17.4643 11.6305 18.1667 9.93478 18.1667 8.16667C18.1667 6.39856 17.4643 4.70286 16.214 3.45262C14.9638 2.20238 13.2681 1.5 11.5 1.5C9.73189 1.5 8.0362 2.20238 6.78595 3.45262C5.53571 4.70286 4.83333 6.39856 4.83333 8.16667Z" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
+                </div>
     </nav>
-
+<div class="page-wrapper">
     <section class="py-5">
         <div class="container">
             <nav aria-label="breadcrumb">
@@ -49,16 +54,17 @@
             <div class="row" id="product-details">
             </div>
         </div>
-    </section>
-
-    <footer class="bg-dark text-white text-center py-3 mt-5">
-        <div class="container">
-            <p class="mb-0">&copy; 2024 Мій Магазин. Всі права захищені.</p>
-        </div>
+        </section>
+    </div>
+    <footer class="styleFooterCart">
+        <div class="copyFooterCart">
+                &copy; 2024 Мій Магазин. Всі права захищені.            
+            </div>
     </footer>
 
-    <script src="scripts/https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="scripts/cart.js"></script>
+    <script src="scripts/favorite.js"></script>
     <script src="scripts/product.js"></script>
 </body>
 </html>

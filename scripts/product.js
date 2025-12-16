@@ -103,6 +103,11 @@ if (productId) {
     getProducts().then(function(products) {
         const product = findProductById(products, productId)
         displayProductDetails(product)
+        
+        // Обновляем статус кнопок "Нравится"
+        if (typeof favorites !== 'undefined') {
+            favorites.updateUI();
+        }
     })
 } else {
     // Якщо ID не вказано, показуємо помилку
