@@ -46,7 +46,6 @@ function getCardHTML(product) {
 
 document.addEventListener("click", function(e) {
     if (e.target.classList.contains("favorite-btn") || e.target.closest(".favorite-btn")) {
-        // Обработка уже в favorite.js
         return;
     }
 })
@@ -102,8 +101,7 @@ getProducts().then(function(products) {
         })
         swiperWrapper.querySelectorAll('.buy-btn').forEach(button => {
             button.addEventListener('click', addToCart);
-        });
-        // Обновляем статус кнопок "Нравится"
+        })
         if (typeof favorites !== 'undefined') {
             favorites.updateUI();
         }
@@ -143,7 +141,7 @@ getProducts().then(function(products) {
         })
         clothingWrapper.querySelectorAll('.buy-btn').forEach(button => {
             button.addEventListener('click', addToCart);
-        });
+        })
         if (typeof favorites !== 'undefined') {
             favorites.updateUI();
         }
@@ -183,7 +181,7 @@ getProducts().then(function(products) {
         })
         gamesWrapper.querySelectorAll('.buy-btn').forEach(button => {
             button.addEventListener('click', addToCart);
-        });
+        })
         if (typeof favorites !== 'undefined') {
             favorites.updateUI();
         }
@@ -260,19 +258,3 @@ slider.addEventListener('scroll',function() {
         updateDots()
     }
 })
-
-// const  sliderWrapper = document.getElementById("swiper-products-list")
-
-// products.forEach(function(product) {
-//     sliderWrapper.innerHTML += `
-//         <div class="swiper-slide">
-//             <div class="product-card">
-//                 <img src="img/${product.image}" alt="${product.title}">
-//                 <h3 class="product-title">${product.title}</h3>
-//                 <p class="product-price">${product.price} грн</p>
-//                 <button class="buy-btn" data-product='${JSON.stringify(product)}'>Купити</button>
-//             </div>
-//         </div>
-//     `
-// })
-

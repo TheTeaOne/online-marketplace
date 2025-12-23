@@ -48,7 +48,7 @@ function displayProductDetails(product) {
     productDetails.innerHTML = `
         <div class="col-md-6">
             <img src="img/${product.image}" class="img-fluid rounded" alt="${product.title}"
-                 onerror="this.src='https://via.placeholder.com/500x500?text=Немає+зображення'">
+                onerror="this.src='https://via.placeholder.com/500x500?text=Немає+зображення'">
         </div>
         <div class="col-md-6">
             <h1 class="mb-3">${product.title}</h1>
@@ -104,7 +104,6 @@ if (productId) {
         const product = findProductById(products, productId)
         displayProductDetails(product)
         
-        // Обновляем статус кнопок "Нравится"
         if (typeof favorites !== 'undefined') {
             favorites.updateUI();
         }

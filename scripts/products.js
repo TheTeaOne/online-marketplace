@@ -114,8 +114,10 @@ function applyFilters() {
     const categoryFilter = document.querySelector('#category-filter').value
     const sortFilter = document.querySelector('#sort-filter').value
     const searchInput = document.querySelector('#search-input').value.toLowerCase()
+    
+    const minPrice = parseFloat(document.querySelector('#price-min').value) || 0
+    const maxPrice = parseFloat(document.querySelector('#price-max').value) || Infinity
 
-    // Фільтрація за категорією
     filteredProducts = allProducts.filter(product => {
         if (categoryFilter !== 'all' && product.category !== categoryFilter) {
             return false
@@ -123,14 +125,16 @@ function applyFilters() {
         return true
     })
 
-    // Пошук за назвою
+    filteredProducts = filteredProducts.filter(product => {
+        return product.price >= minPrice && product.price <= maxPrice
+    })
+
     if (searchInput) {
         filteredProducts = filteredProducts.filter(product => {
             return product.title.toLowerCase().includes(searchInput)
         })
     }
 
-    // Сортування
     switch(sortFilter) {
         case 'price-asc':
             filteredProducts.sort((a, b) => a.price - b.price)
@@ -147,10 +151,10 @@ function applyFilters() {
 }
 
 // Обработка URL параметров для поиска
-const urlParams = new URLSearchParams(window.location.search);
-const searchQuery = urlParams.get('search');
+const urlParams = new URLSearchParams(window.location.search)
+const searchQuery = urlParams.get('search')
 if (searchQuery) {
-    document.querySelector('#search-input').value = searchQuery;
+    document.querySelector('#search-input').value = searchQuery
 }
 
 // Ініціалізація сторінки

@@ -32,7 +32,6 @@ class FavoriteList {
     }
 
     updateUI() {
-        // Обновляем контейнер с избранными товарами (на странице favorite)
         const container = document.querySelector(".favorite-container")
         if (container) {
             const favItems = this.getAll()
@@ -58,8 +57,7 @@ class FavoriteList {
             }
         }
 
-        if (!window.allProducts) return; // Ждем загрузки товаров для кнопок
-        // Обновляем все кнопки на странице
+        if (!window.allProducts) return
         document.querySelectorAll(".favorite-btn").forEach(btn => {
             const productId = parseInt(btn.dataset.productId);
             const product = window.allProducts.find(p => p.id === productId);
@@ -75,7 +73,6 @@ class FavoriteList {
 const favorites = new FavoriteList()
 
 document.addEventListener("click", (e) => {
-    // Нажатие на кнопку фаворита (в карточках)
     const favBtn = e.target.closest(".favorite-btn")
     if (favBtn) {
         const productId = parseInt(favBtn.dataset.productId);
@@ -90,7 +87,6 @@ document.addEventListener("click", (e) => {
         return
     }
 
-    // Удаление из избранного на странице favorites
     const removeBtn = e.target.closest('.remove-fav')
     if (removeBtn) {
         const id = removeBtn.dataset.id
@@ -98,7 +94,6 @@ document.addEventListener("click", (e) => {
         return
     }
 
-    // Кнопка "Купити" в списке избранного
     const buyBtn = e.target.closest('.favorite-container .buy-btn') || (e.target.closest('.buy-btn') && e.target.closest('.favorite-container'))
     if (buyBtn) {
         const productId = parseInt(buyBtn.dataset.productId);
@@ -112,12 +107,11 @@ document.addEventListener("click", (e) => {
     }
 })
 
-// Инициализация при загрузке страницы
+
 if (document.readyState === 'loading') {
     document.addEventListener("DOMContentLoaded", () => {
         favorites.updateUI()
     })
 } else {
-    // Если скрипт загружается после DOMContentLoaded
     setTimeout(() => favorites.updateUI(), 0)
 }
